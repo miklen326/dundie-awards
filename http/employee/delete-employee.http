@@ -1,0 +1,4 @@
+DELETE http://localhost:3000/api/employees/1
+Accept: application/json
+
+###

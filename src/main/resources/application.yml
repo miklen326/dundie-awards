@@ -1,32 +1,24 @@
-springdoc:
-  api-docs:
-    path: /openapi
 server:
   port: 3000
 
+springdoc:
+  api-docs:
+    path: /openapi
+
 spring:
-  spring:
-    datasource:
-      url: jdbc:h2:mem:mydb
-      username: sa
-      password: password
-      driverClassName: org.h2.Driver
-    jpa:
-      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/postgres
-#    username: postgres
-#    password: postgres
-#  jpa:
-#    show-sql: true
-#    properties:
-#      ## Hibernate Properties
-#      # The SQL dialect makes Hibernate generate better SQL for the chosen database
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#    # Hibernate ddl auto (create, create-drop, validate, update)
-#    hibernate:
-#      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    defer-datasource-initialization: true
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
   thymeleaf: # Thymeleaf
     cache: false
     mode: HTML
@@ -37,3 +29,5 @@ spring:
       static-locations: file:src/main/resources/static/
       cache:
         period: 0
+  h2:
+    console.enabled: true

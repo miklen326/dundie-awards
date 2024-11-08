@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Test",
+  "organizationId": 1
+}
+
+###

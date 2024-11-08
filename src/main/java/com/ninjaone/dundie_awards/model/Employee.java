@@ -19,7 +19,7 @@ public class Employee {
     @Column(name = "dundie_awards")
     private Integer dundieAwards;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Organization organization;
 
     public Employee() {

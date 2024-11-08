@@ -3,19 +3,18 @@ package com.ninjaone.dundie_awards;
 import com.ninjaone.dundie_awards.model.Activity;
 import org.springframework.stereotype.Component;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 @Component
 public class MessageBroker {
-
-    private List<Activity> messages = new LinkedList<>();
+    private final Collection<Activity> messages = new ConcurrentLinkedQueue<>();
 
     public void sendMessage(Activity message) {
         messages.add(message);
     }
 
-    public List<Activity> getMessages(){
+    public Collection<Activity> getMessages(){
         return messages;
     }
 }
