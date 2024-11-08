@@ -3,7 +3,7 @@ package com.ninjaone.dundie_awards.dto;
 import jakarta.validation.constraints.Min;
 
 public class AwardsRequestDto {
-    @Min(value = 0, message = "dundieAwards must be greater than or equal to zero")
+    @Min(value = 1, message = "dundieAwards must be greater than zero")
     private int dundieAwards;
 
     public int getDundieAwards() {
