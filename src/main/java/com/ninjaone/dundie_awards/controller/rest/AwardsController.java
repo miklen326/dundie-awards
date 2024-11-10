@@ -27,7 +27,7 @@ public class AwardsController {
      * Adds the number of awards to a specific employee.
      *
      * @param employeeId the unique identifier of the employee
-     * @param awardsRequestDto the request object containing the number of awards to be add
+     * @param awardsRequestDto the request object containing the number of awards to be added
      * @return a response object containing the updated award count for the employee
      */
     @PostMapping("/add-awards-by-employee/{employeeId}")
@@ -40,7 +40,7 @@ public class AwardsController {
      * Adds the number of awards for all employees in a specific organization.
      *
      * @param organizationId the unique identifier of the organization
-     * @param awardsRequestDto the request object containing the number of awards to be add
+     * @param awardsRequestDto the request object containing the number of awards to be added
      * @return a response object containing the updated award count for the organization
      */
     @PostMapping("/add-awards-by-organization/{organizationId}")
